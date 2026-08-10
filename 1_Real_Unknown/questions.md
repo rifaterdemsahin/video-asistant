@@ -9,7 +9,7 @@
 
 | Question | Owner / Agent | Target Stage for Resolution | Resolution Notes / Link |
 | :--- | :--- | :--- | :--- |
-| **Q1:** What is the first concrete video-production workflow to automate? | Human | `1_Real_Unknown` | |
+| ~~**Q1:** What is the first concrete video-production workflow to automate?~~ | Human | `1_Real_Unknown` | Resolved — see [3_Simulation/video_production_pipeline.md](../3_Simulation/video_production_pipeline.md), the author's real 16-step pipeline from Canva |
 | **Q2:** Which skills (Chrome automation, video-transcribe, image-generation, etc.) does the first workflow actually need? | Claude | `2_Environment` | See `2_Environment/superskills.md` |
 | **Q3:** Do any workflows need a hosted backend, or does Chrome + AI models + markdown suffice? | Claude | `1_Real_Unknown` | See Hypothesis 1 in `hypotheses.md` |
 | **Q4:** Which Key Vault secrets are actually consumed once a real workflow runs? | Claude | `2_Environment` | See `.kilo/skills/secrets.md` |

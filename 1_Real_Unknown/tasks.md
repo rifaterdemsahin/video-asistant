@@ -20,13 +20,13 @@
 | TSK-007 | Document Chrome + AI-model environment setup for video production workflows | Environment Agent | [ ] |
 | TSK-008 | Deploy to GitHub Pages and verify | Symbols Agent | [ ] |
 
-## Phase 3: Video Production Workflows (Backlog)
+## Phase 3: Video Production Workflows (In Progress)
 
 | ID | Task | Agent | Done |
 |----|------|-------|------|
-| TSK-009 | Define first concrete video-production task (e.g. transcript → markdown note pipeline) | Real Agent | [ ] |
-| TSK-010 | Simulate the workflow (mockup / flow diagram) before implementing | Simulation Agent | [ ] |
-| TSK-011 | Spec and implement the first workflow | Formula / Symbols Agent | [ ] |
+| TSK-009 | Document the real 16-step video production pipeline (sourced from the author's Canva index) | Simulation Agent | [x] |
+| TSK-010 | Pick the first step to automate (candidate: Step 13 METADATA, or Step 4–5 COHORT/GAPS via `video-transcribe`) | Real Agent | [ ] |
+| TSK-011 | Spec and implement the first workflow step | Formula / Symbols Agent | [ ] |
 
 ## Task Management Rules
 

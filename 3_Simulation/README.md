@@ -22,6 +22,7 @@ This folder holds **visual representations** of what the project will look like 
 | `flow_user_journey.md` | User journey flow diagram |
 | `carousel_config.json` | Image list for the auto-updating carousel |
 | `design_workflow.md` | Design-first workflow — create images before code |
+| `video_production_pipeline.md` | The real 16-step video production pipeline this project assists with (sourced from Canva) |
 
 ## Image Carousel
 

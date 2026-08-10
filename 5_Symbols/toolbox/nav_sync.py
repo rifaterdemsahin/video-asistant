@@ -41,6 +41,7 @@ MENU = [
     ("   ├─ Navigation", "2_Environment/navigation.md"),
     ("3. Simulation", "3_Simulation/README.md"),
     ("   ├─ Design Workflow", "3_Simulation/design_workflow.md"),
+    ("   ├─ Video Production Pipeline", "3_Simulation/video_production_pipeline.md"),
     ("   ├─ Image Prompts", "3_Simulation/image_prompts.md"),
     ("4. Formula", "4_Formula/README.md"),
     ("   ├─ Specs", "4_Formula/specs.md"),
