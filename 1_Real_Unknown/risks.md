@@ -33,15 +33,6 @@
 - **Mitigation:** Track CDN status; consider local fallback assets if this becomes a recurring issue.
 - **Last Updated:** 2026-08-10
 
-### R-004: GitHub Pages Not Yet Enabled
-- **Status:** 🟡 Active
-- **Severity:** Medium
-- **Likelihood:** Certain (manual step not yet done)
-- **Impact:** `.github/workflows/static.yml` exists and gates on smoke tests, but Pages must still be enabled (Settings → Pages → Source: GitHub Actions) for the site to actually go live.
-- **Trigger:** New repo — Pages source has not been configured yet.
-- **Mitigation:** Enable Pages, push to `main`, verify with `python3 5_Symbols/toolbox/smoke_test.py --base-url https://rifaterdemsahin.github.io/video-asistant/`.
-- **Last Updated:** 2026-08-10
-
 ---
 
 ## ✅ Solved Risks
@@ -53,6 +44,13 @@
 - **Resolution:** `.github/workflows/static.yml` carried over from the template — `smoke` job runs the SPEC-008 runner, `deploy` job requires it (`needs: smoke`).
 - **Verification:** Workflow file present at bootstrap time; `smoke_test.py` passes 10/10 locally.
 
+### R-S02: GitHub Pages Not Enabled (was R-004)
+- **Status:** ✅ Solved (2026-08-10)
+- **Severity:** Was 🟡 Medium
+- **Risk:** `.github/workflows/static.yml` existed and gated on smoke tests, but Pages was not yet enabled, so the site was not actually live.
+- **Resolution:** Enabled Pages via `gh api repos/rifaterdemsahin/video-asistant/pages -X POST -f build_type=workflow` (Source: GitHub Actions), then re-ran the deploy workflow (run `31427477900`) — both `smoke` and `deploy` jobs succeeded.
+- **Verification:** `python3 5_Symbols/toolbox/smoke_test.py --base-url https://rifaterdemsahin.github.io/video-asistant/` → 11/11 passed, including "Deployed Site Reachable" (HTTP 200). Root page and `5_Symbols/markdown_renderer.html` both confirmed live via `curl`.
+
 ---
 
 ## 📋 Risk Update Log
@@ -60,6 +58,7 @@
 | Date | Update | Risk ID | Change |
 |------|--------|---------|--------|
 | 2026-08-10 | Project bootstrapped from delivery-pilot-template | R-001 → R-003 | Initial risk assessment carried forward from template + new CI/CD gap identified |
+| 2026-08-10 | GitHub Pages enabled and deploy verified live | R-004 | Solved → R-S02: Pages enabled (build via Actions), workflow re-run green, cloud smoke test 11/11 |
 
 ---
 
