@@ -2,7 +2,7 @@
 
 > **Stage 3: Simulation** — This is the canonical, real-world video production pipeline this project assists with. Sourced from the author's own workflow index in Canva.
 
-**Source of truth:** [Canva — "aug 9 - video 1 mvp animation"](https://www.canva.com/design/DAHRZe5KBoA/OJU0sL318CozUaTBpkdT2g/edit) (page 1 = index + infographic brief). Update this file whenever that index changes.
+**Source of truth:** [Canva — "aug 9 - video 1 mvp animation"](https://www.canva.com/design/DAHRZe5KBoA/OJU0sL318CozUaTBpkdT2g/edit) (page 1 = index + infographic brief, 105 pages total). Update this file whenever that index changes. In Canva, open the **Pages** panel for a top-down grid view of all pages at once instead of scrolling the single-page editor.
 
 ---
 

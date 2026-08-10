@@ -43,6 +43,7 @@ Browser-based tools used for specific steps of [`3_Simulation/video_production_p
 | Tool | URL | Pipeline Step |
 |------|-----|---------------|
 | Flow Music | https://www.flowmusic.app/ | Step 9 — 🔊 AUDIO (score/waveform) |
+| Canva — Video Production Board (all pages) | https://www.canva.com/design/DAHRZe5KBoA/OJU0sL318CozUaTBpkdT2g/edit | Step 0 — 📂 INDEX. This is the source design behind `3_Simulation/video_production_pipeline.md`. In Canva, use the **Pages** panel (bottom-left "Pages" toggle) to get the top-down grid view of all 105 pages at once, rather than scrolling the single-page editor. |
 
 ---
 
