@@ -4,9 +4,9 @@
 > Latest run overwrites this file; one report per test run.
 
 ## Run Info
-- **Date:** 2026-08-10 21:13
-- **Trigger:** post-Pages-enable verification
-- **Mode:** Cloud (https://rifaterdemsahin.github.io/video-asistant/)
+- **Date:** 2026-08-10 21:38
+- **Trigger:** Manual run
+- **Mode:** Local filesystem
 - **Tester:** smoke_test.py (automated)
 - **Verdict:** ✅ ALL PASS
 
@@ -23,7 +23,6 @@
 | Social Links | ✅ Pass | — |
 | README Pages URL | ✅ Pass | — |
 | Secrets Scan | ✅ Pass | — |
-| Deployed Site Reachable | ✅ Pass | HTTP 200 |
 
 ## Failures
 
