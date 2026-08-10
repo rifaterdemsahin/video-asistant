@@ -1,6 +1,7 @@
 {
   "projectMenu": [
     {"label": "Home", "url": "index.html"},
+    {"label": "Cohort Dashboard", "url": "cohort_dashboard.html"},
     {"label": "Docs", "url": "5_Symbols/markdown_renderer.html?file=2_Environment/README.md"},
     {"label": "API", "url": "5_Symbols/markdown_renderer.html?file=4_Formula/README.md"}
   ],
