@@ -4,8 +4,8 @@
 > Latest run overwrites this file; one report per test run.
 
 ## Run Info
-- **Date:** 2026-08-10 21:46
-- **Trigger:** add video production pipeline doc
+- **Date:** 2026-08-10 21:51
+- **Trigger:** add open-links-in-chrome rule
 - **Mode:** Local filesystem
 - **Tester:** smoke_test.py (automated)
 - **Verdict:** ✅ ALL PASS

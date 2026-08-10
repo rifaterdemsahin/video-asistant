@@ -214,6 +214,7 @@ Before any agent implements a change (especially `5_Symbols` code), it must ask 
 - **Active Reflection Routine** — Write a short "retrospective journal" in `6_Semblance/lessons_learned.md` after every milestone (both humans and AI agents must follow this rule).
 - **Keep Debug Menu Config Synchronized** — When markdown files are added, modified, or deleted in any stage, remember to update the debug menu configuration (`navigation_config.json` and the fallback arrays in `index.html` and `5_Symbols/markdown_renderer.html` — or run `python3 5_Symbols/toolbox/nav_sync.py`) to reflect these changes immediately.
 - **Architecture Documentation Sync** — When the system architecture changes, immediately update the architecture overview document at [`2_Environment/architecture.md`](./2_Environment/architecture.md) (with updated Mermaid diagrams) to keep it working.
+- **Open Links in Chrome** — When opening a link, local preview, or deployed page for the user (e.g. to verify a change or show a result), always open it in Google Chrome — never the OS default browser. Use `open -a "Google Chrome" <url>`.
 
 
 ## Secrets Management
