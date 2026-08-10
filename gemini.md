@@ -53,8 +53,12 @@ delivery-pilot-template/
 - **Static Hosting:** GitHub Pages via GitHub Actions
 - **Secrets Management:** Azure Key Vault (never commit secrets to git)
 - **AI Stack:** Qdrant + Ollama (`nomic-embed-text`, 4096 dimensions)
-- **Backend:** Fly.io for Python services
+- **Deployments:** Fly.io — container-based (Docker) Python service deployments
+- **Database:** Supabase — managed Postgres, auth, realtime, storage, `pgvector`
+- **Server-Side Logs:** Axiom — centralized structured logging, tracing, alerting
 - **CI/CD:** GitHub Actions
+
+> 📋 See [`2_Environment/tools.md`](2_Environment/tools.md) for a single overview of every tool in the stack.
 
 ### Navigation & UI Rules
 
@@ -127,6 +131,49 @@ delivery-pilot-template/
 - Create a matching Key Vault per environment (dev/staging/prod) in Azure Portal
 - Never push secrets to GitHub
 - Reference `.env.example` for required variables
+
+#### Why Azure Key Vault?
+- **Security:** FIPS 140-2 validated HSMs, RBAC + access policies, automatic key rotation, audit logs via Azure Monitor.
+- **Low cost:** ~$0.03/10,000 operations (Standard tier); free tier available for dev/test; no per-seat licensing.
+- **Compliance:** Meets SOC 2, ISO 27001, HIPAA, GDPR requirements out of the box.
+- **Integration:** Native GitHub Actions support via `azure/login` + `Azure/get-keyvault-secrets`; works with Fly.io via env vars.
+
+---
+
+## 🧠 Required Skills & CLI commands for Antigravity
+
+The following Antigravity CLI (`agy`) and configuration capabilities are required to operate this project effectively. 
+
+### 🚀 CLI Slash Commands
+Inside the Antigravity TUI, type `/` to launch the slash command menu:
+
+| Command | Purpose | Usage Recommendation |
+|---------|---------|----------------------|
+| `/goal` | Execute a long-running task with extra thorough loops | Use for complex features that require deep validation loops |
+| `/schedule` | Schedule recurring background cron tasks or one-time timers | Use for recurring health checks, tests, or reminder alerts |
+| `/plan` | Enter planning modality to draft step-by-step implementations | Use before writing code to outline the architectural approach |
+| `/grill-me` | Interactive prompt alignment and interviewer | Use to resolve ambiguous requirements or design trade-offs |
+| `/teamwork-preview` | Spin up a group of specialist subagents working together | Use for large refactoring or multi-folder updates |
+| `/learn` | Persist correction feedback into global memory | Use when the user corrects your code pattern or tooling rules |
+
+### 🛠 Customization Architecture
+Antigravity automatically loads configurations from these directories:
+1. **Global Customizations**: `~/.gemini/config/`
+2. **Workspace Customizations**: `<project-root>/.agents/`
+
+Under either customizations directory, you can register:
+- `skills/<name>/SKILL.md` (YAML-frontmatter guided task checklists)
+- `rules/` (Markdown constraints and rules files)
+- `plugins/` (Packaged sets of hooks, rules, and MCP servers)
+
+### 📋 Error Tracking Workflow
+When errors occur, use this workflow:
+1. Log to `6_Semblance/error.log` and diagnose root cause in `gap_analysis.md`.
+2. Apply fix, logging to `6_Semblance/fix.log` with status `APPLIED`.
+3. Verify fixes in the browser using the local dev server.
+4. Perform code reviews on the diff.
+5. Commit fixes, then update status in `fix.log` to `VERIFIED`.
+6. Append takeaways to `6_Semblance/lessons_learned.md`.
 
 ---
 
