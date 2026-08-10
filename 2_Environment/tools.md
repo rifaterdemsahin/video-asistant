@@ -19,6 +19,19 @@
 | **Auto-Fix Agent** | Error-Fix Agent (GitHub Token) | Automated error discovery: visits pages, finds errors, opens GitHub Issues, applies fixes, reports to `6_Semblance/`. Uses GitHub PAT from Azure Key Vault. | [`github_agent.md`](./github_agent.md) |
 | **MCP Servers** | GitHub, Azure KV, Browser, Supabase, Axiom, Fly.io, Qdrant | Model Context Protocol servers connecting agents to external tools | [`mcp.md`](./mcp.md) |
 | **Superskills** | 6 project skills + system skills | On-demand skill loading: navigation, planning, simulation, deploy, secrets, error-fix | [`superskills.md`](./superskills.md) |
+| **AI Chat Links** | Gemini, Claude, Grok | Consumer AI chat web apps — opened in Chrome on request | See [AI Chat Links](#-ai-chat-links-open-in-chrome-on-request) below |
+
+---
+
+## 💬 AI Chat Links (open in Chrome on request)
+
+Consumer AI chat web apps used directly in the browser as part of the video production workflow (e.g. cross-checking a script or thumbnail idea across models). Per the **Open Links in Chrome** rule in `agents.md`/`claude.md`/`gemini.md`, when asked to open one of these, always use `open -a "Google Chrome" <url>` — never the OS default browser.
+
+| AI | URL |
+|----|-----|
+| Google Gemini | https://gemini.google.com/app/ |
+| Claude | https://claude.ai/ |
+| Grok | https://grok.com/ |
 
 ---
 
