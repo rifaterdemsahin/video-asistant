@@ -20,6 +20,7 @@
 | **MCP Servers** | GitHub, Azure KV, Browser, Supabase, Axiom, Fly.io, Qdrant | Model Context Protocol servers connecting agents to external tools | [`mcp.md`](./mcp.md) |
 | **Superskills** | 6 project skills + system skills | On-demand skill loading: navigation, planning, simulation, deploy, secrets, error-fix | [`superskills.md`](./superskills.md) |
 | **AI Chat Links** | Gemini, Claude, Grok | Consumer AI chat web apps — opened in Chrome on request | See [AI Chat Links](#-ai-chat-links-open-in-chrome-on-request) below |
+| **Production Web Tools** | Flow Music | Browser-based tools used in the production pipeline — opened in Chrome on request | See [Production Web Tools](#-production-web-tools-open-in-chrome-on-request) below |
 
 ---
 
@@ -32,6 +33,16 @@ Consumer AI chat web apps used directly in the browser as part of the video prod
 | Google Gemini | https://gemini.google.com/app/ |
 | Claude | https://claude.ai/ |
 | Grok | https://grok.com/ |
+
+---
+
+## 🎵 Production Web Tools (open in Chrome on request)
+
+Browser-based tools used for specific steps of [`3_Simulation/video_production_pipeline.md`](../3_Simulation/video_production_pipeline.md). Same rule applies — opened via `open -a "Google Chrome" <url>` when asked.
+
+| Tool | URL | Pipeline Step |
+|------|-----|---------------|
+| Flow Music | https://www.flowmusic.app/ | Step 9 — 🔊 AUDIO (score/waveform) |
 
 ---
 
