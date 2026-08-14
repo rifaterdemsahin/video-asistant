@@ -74,13 +74,16 @@
 - The deploy workflow (`static.yml`) still deploys unconditionally — wiring the smoke runner in as a gate is the single remaining step to close R-007.
 - Lesson: local-only testing gave a false "all green" — the folder-link bug was only visible against the deployed site. Always run both modes, as the Test Agent rule requires.
 
-## 📅 2026-07-12: Template Restructure — Moves, Placeholders, Skills, CI/CD Gate
+## 📅 2026-08-14: Multi-Model Redundancy & LLM Auth Provider Resilience
 
 ### What went well
-- All three file moves (`supabase/`, `prompts.md`, `markdown_renderer.html`) landed with zero broken links because the smoke runner validated every step — the renderer move (the risky one) worked first try by keeping `?file=` parameters root-relative and adding a single `../` fetch base.
-- The CI/CD gate is now real: `static.yml` runs the smoke job before deploy, and the first gated pipeline went green in 26 seconds. Formula Agent owns the pipeline end to end.
-- Template-reuse hardening: the GitHub edit URL now derives user/repo from the Pages URL, and SPEC-010 enumerates exactly which six values a consumer project replaces.
+- When Claude subscription access was disabled by organization policy during a session with Claude Code, the delivery-pilot-template framework proved its design goal: **Plug & Play Model Resilience**.
+- The project's state, specifications (`4_Formula/specs.md`), and progress were fully intact, allowing immediate transition to the Gemini agent (`GEMINI.md`) without losing context or progress.
+- Documenting secrets in Azure Key Vault (`dp-kv-deliverypilot`) provides a clean path to use dedicated Anthropic API keys (`ANTHROPIC-API-KEY`) rather than relying purely on interactive OAuth user subscriptions.
 
 ### Gaps & Challenges
-- Blind search-and-replace on `prompts.md` mangled the folder-tree diagrams in the persona files — caught immediately and fixed. Lesson: path renames in prose need per-context review, not one regex.
-- The Supabase CLI expects `supabase/` at the repo root; after the move, CLI commands need `--workdir 2_Environment` (documented in `4_Formula/database.md`). Moving conventional-location folders trades tidiness for tool friction — acceptable here, but worth flagging to consumers.
+- Organization subscription policies can change abruptly. Relying on interactive OAuth logins for headless or terminal coding agents creates a single point of failure.
+
+### Takeaway for Future AI Agents
+- Always configure API keys in Azure Key Vault as the primary headless execution mode and maintain multi-model capability across Claude, Gemini, Copilot, and Kilo Code.
+

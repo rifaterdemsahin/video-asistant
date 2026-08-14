@@ -22,8 +22,6 @@
 - **Impact:** Agents cannot retrieve `ANTHROPIC-API-KEY`, `YOUTUBE-API-KEY`, or other secrets from `dp-kv-deliverypilot` — automated workflows fail.
 - **Trigger:** Azure outage, expired credentials, network partition, missing `az login` session
 - **Mitigation:** Verify `az account show` / `az keyvault secret list --vault-name dp-kv-deliverypilot` before relying on a secret at runtime.
-- **Last Updated:** 2026-08-10
-
 ### R-002: CDN Dependency — Frontend Degradation
 - **Status:** 🟡 Active
 - **Severity:** Medium
@@ -32,6 +30,17 @@
 - **Trigger:** CDN outage affecting `cdnjs.cloudflare.com` or `fonts.googleapis.com`
 - **Mitigation:** Track CDN status; consider local fallback assets if this becomes a recurring issue.
 - **Last Updated:** 2026-08-10
+
+### R-003: LLM Organization Subscription Cutoff & OAuth Expiration
+- **Status:** 🟡 Active
+- **Severity:** Medium
+- **Likelihood:** Medium (Enterprise policies or subscription tiers can disable Claude subscription access in Claude Code)
+- **Impact:** Interactive Claude agent sessions fail with "organization has disabled Claude subscription access for Claude Code".
+- **Trigger:** Corporate policy enforcement, seat limit changes, or OAuth subscription invalidation
+- **Mitigation:** Maintain multi-model failover (switch seamlessly to Gemini / Copilot / Kilo Code via `AGENTS.md`) and utilize Azure Key Vault `dp-kv-deliverypilot` to source `ANTHROPIC-API-KEY` directly for API-level authorization.
+- **Last Updated:** 2026-08-14
+
+
 
 ---
 
@@ -59,6 +68,8 @@
 |------|--------|---------|--------|
 | 2026-08-10 | Project bootstrapped from delivery-pilot-template | R-001 → R-003 | Initial risk assessment carried forward from template + new CI/CD gap identified |
 | 2026-08-10 | GitHub Pages enabled and deploy verified live | R-004 | Solved → R-S02: Pages enabled (build via Actions), workflow re-run green, cloud smoke test 11/11 |
+| 2026-08-14 | Claude subscription disabled in Claude Code | R-003 | Added active risk: Organization OAuth cutoff; multi-model resilience + Key Vault API key fallback |
+
 
 ---
 

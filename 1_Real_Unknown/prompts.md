@@ -53,6 +53,6 @@ To begin, ask me for the initial details about my project idea, or provide a tem
 
 Record every prompt given to AI agents below. Include the date, agent, and purpose.
 
-| Date | Agent | Purpose | Prompt Summary | Action Taken |
-|------|-------|---------|----------------|--------------|
 | 2026-08-10 | Claude | Bootstrap project from delivery-pilot-template | Init project from `delivery-pilot-template`, replace folders, commit/push, use existing Azure Key Vault `dp-kv-deliverypilot` (no new vault), goal: video production assistant driven by Chrome + AI models over markdown sources, source skills from popular GitHub repos | Copied template structure, replaced placeholders, wrote project-specific `1_Real_Unknown/` content, pointed secrets docs at `dp-kv-deliverypilot`, catalogued relevant skills in `2_Environment/superskills.md`, rebuilt navigation, ran smoke tests, committed and pushed |
+| 2026-08-14 | Gemini | Incident Report & Multi-Model Recovery | Claude subscription disabled in Claude Code (`Your organization has disabled Claude subscription access for Claude Code · Use an Anthropic API key instead, or ask your admin to enable access`), create a report, commit and push, complete the task | Created incident report in `7_Testing_Known/claude_subscription_incident_report.md`, updated `6_Semblance/` error/fix/lessons learned logs, updated `1_Real_Unknown/risks.md`, updated thinking log, ran smoke tests, committed and pushed |
+

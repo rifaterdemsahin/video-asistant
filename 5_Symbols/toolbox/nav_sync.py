@@ -68,7 +68,9 @@ MENU = [
     ("   ├─ Logic Tracker", "7_Testing_Known/logic.md"),
     ("   ├─ Validation Report", "7_Testing_Known/validation_report.md"),
     ("   ├─ Sanity Data Source", "7_Testing_Known/sanity_check_report.md"),
+    ("   ├─ Incident Report (Claude Auth)", "7_Testing_Known/claude_subscription_incident_report.md"),
     ("---", "divider"),
+
     ("agents.md", "agents.md"),
     ("claude.md", "claude.md"),
     ("gemini.md", "gemini.md"),
